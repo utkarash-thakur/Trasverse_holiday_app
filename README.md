@@ -1,83 +1,50 @@
-# **Traverse Travel Website**
+# Traverse · Holiday Booking Website
 
+A travel site for exploring and booking holiday destinations, with a user side and an admin side. Built with HTML, CSS and JavaScript as a team project at Masai School (Unit 3).
 
-The main motive behind creating this website is to showcase the skills that we learned in Unit 3 of Masai School's program. We used the following technology stacks: HTML, CSS, JavaScript, and the animation library, AOS (https://github.com/michalsnik/aos). We created a JSON server for all the data we needed and worked on that data according to our requirements. The link of JSON server is (https://frail-show.onrender.com/data)
+**Live site:** [travasure.netlify.app](https://travasure.netlify.app/) · **Portfolio:** [utkarash-thakur.vercel.app](https://utkarash-thakur.vercel.app)
 
-<img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/screencapture-127-0-0-1-5501-index-html-2023-05-08-21_05_38.png">
+<img width="100%" alt="Traverse home page" src="./Imgs/readme/screencapture-127-0-0-1-5501-index-html-2023-05-08-21_05_38.png">
 
-The website has two sides: the admin and the user. To visit the admin side, users must use "Utkarsh@Trasverse.com" as the username and "Traverse" as the password.
+## Highlights
 
+- Multi-page site: sign-up and login, destination browsing, booking form, payment page and "My Bookings".
+- Separate admin pages to see all bookings and to add, edit or delete destinations.
+- Destinations come from a REST API (a JSON server); the logged-in user and their bookings are kept in `localStorage`.
+- Holidays page with category filters, price and rating filters, sorting by price, and search by name.
+- Scroll animations with the AOS library.
 
+## Tech stack
 
-## **Admin Side**
+HTML · CSS · JavaScript · JSON server (REST API) · AOS
 
-The admin side has three pages: Home, AddProduct, and Product. The Home page displays all the booking data. In the AddProduct page, admins can add new tourist sites to the website. In the Product page, admins can see all the tourist locations available on the website and can edit or delete them.
+## User side
 
-## **User Side**
+- **Register and log in.** New users sign up with name, email, password and phone number.
+- **Holidays.** Browse all destinations, filter by category, price and rating, sort by price, or search by name.
+- **Book.** "Book Now" opens a form for name, email, phone, city, number of people, age and travel date. You must be logged in.
+- **Pay.** Enter card details, then confirm with an OTP.
+- **My Bookings.** See every booking you have made.
 
-If the user is new to the website, they have to register in the Sign In section with the required details. Otherwise, they can log in to the user side by entering their username and password. If the details are correct, the user will be redirected to the home page.
+<img width="100%" alt="Holidays page" src="./Imgs/readme/Screenshot 2023-05-08 210645.png">
+<img width="100%" alt="Booking form" src="./Imgs/readme/Screenshot 2023-05-08 210703.png">
+<img width="100%" alt="Payment page" src="./Imgs/readme/Screenshot 2023-05-08 210722.png">
+<img width="100%" alt="My Bookings page" src="./Imgs/readme/Screenshot 2023-05-08 221053.png">
 
-The home page is mostly static, and the nav bar's "Holiday" tag leads users to all the available locations where they can book their visits. The "My Booking" section allows users to view all their bookings. Note that if the user is not logged in to the system, they have to log in first to access the "My Booking" page.
+## Admin side
 
-We added animations using the AOS library to the home page. In the middle section of the page, there are glimpses of the available locations. By clicking on them, users can be redirected to the destinations' pages.
+- **Home:** all bookings.
+- **Add destination:** name, description, image and price.
+- **Destinations:** edit or delete any destination.
 
-In the Holidays page, all the locations are shown to the user. Another nav bar is added here, and users can filter the locations by different categories. In the right side of the page, there are the highlighted locations, and by clicking on them, users can add tourist locations to their bookings in the middle section by clicking on "Book Now." If the user is logged in to the system, they will be redirected to a form; otherwise, they must log in to book a location.
+Demo admin login (sample data only): `utkarsh@travasure.com` / `travasure`.
 
-In the booking details form, users must fill in details like their name, email, phone number, city, number of people, age, and date of the journey. After filling in all the required details, the user can click on "Proceed to Checkout." If the user hasn't filled in all the details, an alert will appear that they need to do so.
+<img width="100%" alt="Admin login page" src="./Imgs/readme/Screenshot 2023-05-08 205929.png">
 
-If everything is successful, the user will be redirected to the payment page, where they must fill in their card number, cardholder name, expiration month and year, and CVV. After filling in all the details, the user can proceed to checkout, and a top-up generated. After filling in the OTP, the user can successfully book the holiday destination, and they can view their booking details by visiting the "My Booking" page.
+## Run it locally
 
-## **Admin Side Features and Functionality**
+No build step. Clone the repo and open `index.html` in a browser, or use a local server such as the VS Code Live Server extension. The destination data is loaded from the hosted JSON server.
 
-**Login:** To access the admin side, users must use "Admin@Trasverse.com" as the username and "Traverse" as the password.
+## Author
 
-**Home Page:** The Home page displays all the booking data.
-
-**Add Product Page:** In the Add Product page, admins can add new tourist sites to the website by filling in details like name, description, image, and price.
-
-**Product Page:** In the Product page, admins can see all the tourist locations available on the website and can edit or delete them.
-
-**JSON Server:** A JSON server is used to store and retrieve all the data needed on the admin side.
-
- ## **User Side Features and Functionality**
-
-**Register:** New users can register by filling in details like name, email, password, and phone number in the Sign In section.
-<img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/Screenshot 2023-05-08 210002.png">
-
-**Login:**  Returning users can log in to the user side by entering their username and password.
-<img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/Screenshot 2023-05-08 205951.png">
-
-
-**Admin Login Page**
-
-
-<img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/Screenshot 2023-05-08 205929.png">
-
-**Home Page:** The home page is mostly static, and the nav bar's "Holiday" tag leads users to all the available locations where they can book their visits.
-
-
-**AOS Animations:** We added animations using the AOS library to the home page.
-
-**Holiday Page:** In the Holidays page, all the locations are shown to the user. Another nav bar is added here, and users can filter the locations by different categories. And also filter by the price ranges and the ratings . And sort by the price form low to high and vice versa. also user can search by name of the destination.
-
-<img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/Screenshot 2023-05-08 210645.png">
-
-**Booking a Location:** In the right side of the page, there are the highlighted locations, and by clicking on them, users can add tourist locations to their bookings in the middle section by clicking on "Book Now." If the user is logged in to the system, they will be redirected to a form; otherwise, they must log in to book a location.
-
-**Booking Details Form:** In the booking details form, users must fill in details like their name, email, phone number, city, number of people, age, and date of the journey. After filling in all the required details, the user can click on "Proceed to Checkout." If the user hasn't filled in all the details, an alert will appear that they need to do so.
-
-<img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/Screenshot 2023-05-08 210703.png">
-
-**Payment Page:** If everything is successful, the user will be redirected to the payment page, where they must fill in their card number, cardholder name, expiration month and year, and CVV. After filling in all the details, the user can proceed to checkout, and a top-up generated.
-
-<img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/Screenshot 2023-05-08 210722.png">
-
-
-
-**Booking Confirmation:** After filling in the OTP, the user can successfully book the holiday destination, and they can view their booking details by visiting the "My Booking" page.
-
-<img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/Screenshot 2023-05-08 210751.png">
-
-**My Booking Page:** The "My Booking" section allows users to view all their bookings. Note that if the user is not logged in to the system, they have to log in first to access the "My Booking" page.
-
-<img width="100%" alt="Screenshot 2022-06-10 at 3 12 26 PM" src="./Imgs/readme/Screenshot 2023-05-08 221053.png">
+**Utkarash Thakur**, Backend Engineer · [Portfolio](https://utkarash-thakur.vercel.app) · [LinkedIn](https://www.linkedin.com/in/utkarash-thakur/)
